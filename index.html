@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function exploreMaze(mazeSize) {
+        let tourist = 1
+        let trouble = 3
+
+
+        while (mazeSize > tourist) {
+            tourist++
+            if (trouble === tourist) {
+                trouble += 3
+                console.log("X")
+                continue
+            }
+            console.log("ahead", tourist)
+        }
+
+        if (tourist === mazeSize) {
+            do {
+                tourist--
+                console.log("back", tourist)
+            }
+            while (
+                tourist > 1
+                )
+        }
+
+    }
+
+    exploreMaze(50)
+
+</script>
+
+</body>
+</html>
